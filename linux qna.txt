@@ -1,0 +1,254 @@
+1. If a file path has a space in it, you can wrap the path in quotes, 
+or you can __escape___ the space with a \ character.
+
+2. What does the mkdir command do?
+creates a directory
+mkdir will create a specified directory, and mkdir -p will 
+create parent directories as necessary for a deeper path.
+
+3. The rmdir command _____.
+can only delete an empty directory
+While the rmdir command can only delete empty directories, 
+you can use rm -rf to delete non-empty directories and trees of directories.
+
+4. What could you write to rename the file report.txt to output.txt?
+mv report.txt output.txt
+While mv is usually used to move files, we can also use it to rename them.
+
+5.What can you write to delete a directory called Photos 
+which contains many subdirectories?
+rm -r Photos
+The -r option tells rm to remove the file hierarchy, not just files.
+
+6. The find command lets us look for files by name, size, etc., _____.
+wherever the user who runs it has permission to view
+
+7. You want to make a copy of the poems.txt file. Which command would you use?
+cp poems.txt poems2.txt
+This command will create a copy of poems.txt called poems2.txt.
+
+8. Why would a normal user not do any harm by 
+trying to change system files and directories?
+Normal users do not have sufficient permissions to modify these files and directories.
+This statement is correct, and normal users would need root 
+or sudo authority to change these files and directories.
+
+9. While all other users' home directories are kept 
+in /home/, the superuser's home directory is stored at _____.
+/root
+Root is a special user, and it has a special home directory.
+
+10. Which of these is an absolute path?
+/var/lib/mysql
+We can tell this is an absolute path because 
+it begins with the slash that represents the filesystem root.
+
+11. In most shells, what is the significance of the ~ character?
+It represents the path to the current user's home directory.
+Using tilde expansion, most shells use this character to 
+represent the home directory of the current user.
+
+12. If your current working directory is /home/alice/Documents/Financial, 
+and you want to change it to /home/alice, you can use the command _____.
+cd ../../
+
+13. What command allows you to change to another directory?
+cd
+This command will change to a specified directory or, 
+without any arguments, will change the working directory to the user's home directory.
+
+14. You have come across an unknown file named myfile.txt. 
+Which command would you type to display ownership or modification information about this file?
+stat myfile.txt
+This command will display ownership and modification information, 
+as well as other details about the file.
+
+15. What can you write to find files in Alice's home directory with report in the name?
+find /home/alice -name "*report*"
+The find command's syntax is a little bit different from most other commands.
+
+16. A symbolic link using a relative path will break if _____.
+the link or the referenced file is moved
+If you want to make a link that can be moved without 
+breaking, use an absolute path or a hard link.
+
+17. What does the command ln -s outcome.txt report.txt create?
+A symlink named report.txt that refers to outcome.txt.
+Remember that a symbolic link will break if the original file is moved.
+
+18. You have downloaded a program from the web, and when you try to run it, you receive the error:
+
+-bash: ./newprogram: Permission denied
+
+How would you attempt to resolve this problem?
+
+Run the command chmod u+x newprogram to add execute permissions to the file.
+This command will allow our user to execute the program.
+
+19. You need to use superuser privileges to _____.
+modify system settings and software
+Changes to the system need to be done by a user with elevated privileges.
+
+20. You want to find any files that start with Po and end with e. 
+Which character would you insert between o and e to match any number of every possible character?
+*
+This character is a wild card and will match any number of any 
+characters in a filename, for example, Poe, Pole, and Police.
+
+21. File permissions let us control who can _____.
+read, write, and execute a file
+R, W, and X are the fundamental categories of 
+access for the user, group, and others.
+
+22. If you we want to execute using superuser privileges, 
+what command do you use in front of another command?
+sudo
+This command can be thought of as 'switch user and do', 
+'superuser do', or 'substitute user and do', depending on who you ask.
+
+23. How would you alter this command using octal notation to give read, write, and execute permissions to the file's owner, members of the file's designated group, and all other users for the file poems.txt?
+
+chmod poems.txt
+
+chmod 777 poems.txt
+This changes the permissions for the poems.txt file, 
+and gives read, write, and execute permissions to the file's owner, members of the file's designated group, and all other users.
+
+24. File permissions can be set using two modes. What are they?
+octal and symbolic
+Depending on how you need to change the permissions of a file, 
+it can be easier to use one or the other.
+
+25. What is the highest level of the filesystem hierarchy called?
+root
+The filesystem root, represented by /, is the highest level of 
+the filesystem hierarchy -- everything else in the filesystem 
+is nested somewhere within the root filesystem.
+
+26. What does the command tar -cf docs.tar Documents/ do?
+It creates an archive of the Documents directory, called docs.tar, with no compression.
+The c option creates an archive, and f outputs it to a file instead 
+of the standard output.
+
+27. Many command-line tools are intended to be used in pipelines with other commands because they are _____.
+modular
+Pipes allow us to connect simple tools together in complex ways.
+
+28. To extract files from a tar file, use the option _____.
+x
+This option will tell tar to retrieve files from an archive.
+
+29. What symbol is often used to redirect the standard output or standard error into a file or other location?
+>
+The redirection operator can also be used to truncate a file.
+
+30. Which character represents a UNIX pipe?
+|
+This character isn't widely used, so it can be odd to work with at first.
+
+31. What purpose do zip files serve in Linux?
+They allow us to combine files in a space-saving way, and are commonly used when we exchange files with other platforms or across the internet.
+Zip files allow us to reduce the space taken by one or more files, and provide a cross-platform file that we can exchange easily.
+
+32. How can the UNIX Philosophy be summed up?
+Tools should do one thing well, and communicate with each other using text.
+
+33. You redirect output to a specific file but when you open it, you find the file is missing its original contents. Why are the original contents gone?
+You used a single > sign, which overwrites the contents of the file.
+A single > when redirecting file contents will overwrite the content
+s of the target file.
+
+34. To view only the first eight lines of the file report.txt, you could write _____.
+head -n8 report.txt
+The -n option sets what number of lines to display.
+
+35. Input and output streams are numbered. Which of these represents the standard error?
+2
+0 is the standard input, and 1 is the standard output.
+
+36. What does a pipe do?
+It sends the output of one command to the input of another.
+
+37. A user wants to view the contents of the file poems.txt. Which command would be used to see the entire contents of this file?
+cat
+This command will display all contents of the file selected.
+
+38. To set environment variables that persist between bash sessions, you can edit _____.
+~/.bash_profile
+
+39. Which command lets you scroll around and search in a text file?
+less
+
+40. Vim has two primary operating modes. What are they?
+command mode and insert mode
+Switch to command mode with Esc and insert mode with "i", "I", "o", or a variety of other keys.
+
+41. In nano, what does Ctrl + O (^O) do?
+saves (outputs) the file
+Some of the nano commands are not very intuitive. Luckily, 
+the menu bar at the bottom of the screen reminds us of some common tasks.
+
+42. In nano, where are common commands listed?
+at the bottom of the screen
+As you resize the terminal, you'll see more or fewer commands.
+
+43. How would you alter the below code to add numbers to the output lines?
+
+grep "the" poems.txt
+
+grep -n "the" poems.txt
+This command will number the output lines where the word "the" is found in the file poems.txt.
+
+44. To show the lines from the file report.txt which contain the numbers 1, 2, or 3, what should you write?
+grep -E "[123]" report.txt
+This command uses a regular expression rather than a literal string match.
+
+
+45. What is the best command for modifying information from a file or stream?
+sed
+sed is a good choice if you need to modify information.
+
+46. In an Awk program, the term $3 represents _____.
+the contents of the third field on each line
+Awk is helpful for extracting information from well-formatted text streams.
+
+47. To switch from insert mode to command mode in Vim, press _____.
+Esc
+When you switch to command mode from insert mode, the --INSERT-- indicator will disappear from the lower left corner of the screen.
+
+48. What should you write to show the lines from the file report.txt which match the search term "completed"?
+grep "completed" report.txt
+While the double quotes aren't necessary, it's a good practice to use them.
+
+49. You are in your home directory and have typed the command ls -h. What output will result from typing this command?
+Files in the home directory will be displayed, with their sizes represented in human-readable units.
+
+50. On a Linux system, the PATH environment variable represents _____.
+locations which the shell will search for executable programs
+Without being able to search in the PATH, we would have to type out the full path to common tools every time we used them.
+
+51. While most commands work on most Linux systems, it's important to know the _____ you're working on, to be aware of differences in package managers and configuration schemes.
+distribution
+Which distribution you're using will affect many things, large and small.
+
+52. Which command reveals the version of the Linux kernel that is currently running?
+uname -r
+To get the full amount of information, use the -a option.
+
+53. You can find out how much available disk space a system has with _____.
+df -h
+The -h option shows the numbers in a human-friendly format.
+
+54. You can find out how much available memory a system has using _____.
+free -h
+The -h option shows the numbers in a human-friendly format.
+
+55. You are trying to install software and run the tree command. You see the software is not installed. Which command would you use on Ubuntu Linux to install this software?
+sudo apt install tree
+This command will install the missing software from the repository on Ubuntu or Debian Linux.
+
+
+56. The lists of available software for a particular distro are called _____.
+repositories
+Distro repositories host software that's managed by the distro maintainers and others.
+
