@@ -1,0 +1,189 @@
+1. Which of the following is a benefit of using the following line? using namespace std;
+It eliminates the need to specify where variables or functions in the standard library are declared (like cout, vector, endl, etc.), resulting in shorter code.
+
+2. What does encapsulation mean?
+keeping data and functions relevant to their model
+
+3. What's wrong with this piece of code?
+
+#include <iostream>
+char str[20];
+int main(){
+  std::cout << "What's your name? ";
+  str << std::cin;
+  std::cout << "Hello, " << str;
+  return 0;
+}
+
+The << operator is misused to transfer the input from the input to str.
+
+4. What does this part of a main.cpp file do?
+
+#include "library.h"
+
+Causes the replacement of the #include directive by the entire contents of the source file library.h. This is similar to a Copy-Paste operation of library.h into main.cpp.
+
+5. Why is it important to specify the data type when declaring a variable.
+Because the compiler needs to know how to interpret the data, and its width in bytes.
+
+6. When is type casting useful?
+when an operation needs to be performed on specific data types like float or int
+
+7. What is the assumed type of a constant represented in the source code as 0.44?
+double
+
+8. What is type casting?
+Explicitly specifying the data type of an expression.
+
+9. What does the auto type specifier do in this line of code? (since C++11) auto x = 40000.22;
+Specifies that the type of x will be deduced from the initializer. In this case, double.
+
+10. Which of the following is not a built-in operator of the C++ programming language?
+Logical XOR
+
+11. What's a disadvantage of defining constants as macros?
+They may lead to syntax errors.
+
+12. Suppose you want to have several lines of code that print data out for debugging purposes, but you don't want those lines to make it to the final application, for efficiency reasons. Which of the following achieves the desired behavior by using preprocessor directives?
+// comment the following line for the final application
+#define DEBUGGING
+
+// copy and customize this for every debugging line
+#ifdef DEBUGGING
+ cout<<"Var1 = "<<var1<<endl;
+#endif
+
+13. What is a variable of type double?
+a floating point number
+
+14. How does the string data type work in C++?
+Strings are implemented as the string class in the string header file.
+
+15. What's a correct way of accessing the third element in the following array? int array[10];
+array[2]
+
+16. What would be the correct declaration of a constructor for a class named Sprite?
+public:
+  Sprite();
+
+17. What is one purpose of a structure?
+to contain several data members of different types
+
+18. Which of the following is an actual difference between a pointer and an iterator?
+Incrementing an iterator always means accessing the next element in the container (if any), no matter the container. Incrementing a pointer means pointing to the next element in memory, not always the next element.
+
+19. Which of the following is a true statement about the difference between pointers and references?
+A reference cannot be assigned a new value (i.e. refer to a new object other than the original.)
+
+20. What's the correct way to call the count member function for the object pointer called grades?
+
+class my_array{
+ public:
+  int count();
+};  // ... more members above
+
+int main(){
+ my_array *grades = new my_array();
+} // ... more code above
+
+grades->count()
+
+20. Why is it not possible to declare an array of references, a pointer to a reference, or a reference to a reference?
+Because references are not objects nor variables, so they are not guaranteed to occupy storage and have an address.
+
+21. The '&' character has many uses in the C++ programming language. Which of the following is not one of these uses?
+to declare a pointer to a function
+
+22. What is the statement below equivalent to?
+
+sprite->x
+
+(*sprite).x
+
+23. Suppose you want to have several lines of code that print some variables out for debugging purposes, but you don't want those lines to make it to the final application, for efficiency reasons. Which of the following achieves the desired behavior producing the shortest possible code length regardless of the level of optimization used?
+// comment the following line for the final application
+#define DEBUGGING
+
+// copy and customize this for every debugging line
+#ifdef DEBUGGING
+ cout<<"Var1 = "<<var1<<endl;
+#endif
+
+24. Which of the following is an include guard for the header file my_library.h?
+#ifndef MY_LIBRARY_H
+#define MY_LIBRARY_H
+
+// my_library.h content 
+
+#endif /* MY_LIBRARY_H */
+
+25. What is the purpose of the following line in a header file?
+
+#pragma once
+
+to make the compiler only parse that header file once even if it is included multiple times in the source
+
+26. What is an include guard?
+a preprocessor statement that prevents a source file to be included more than once in a project
+
+27. What is the following expression equivalent to?
+
+A->B->C->D
+
+*(*((*A).B).C).D
+
+28. What's the correct way to call the count member function for the object called grades?
+
+class my_array{
+ public:
+  my_array();
+  int count();
+  // ... more members
+};
+int main(){
+ my_array grades;
+ // ... more code
+ return 0;
+}
+
+grades.count()
+
+29. Which of the following is a type almost identical to a class?
+struct
+
+30. What's the difference between a public and a private class member?
+Public members can be accessed by any function, while private members can only be accessed by the same class' member functions and the friends of the class.
+
+31. What's the correct syntax of an if statement in C++?
+if(condition)
+  // true block
+else
+  // false block
+
+32. What's a difference between a while loop and a do...while loop?
+do...while loops always run the body of the loop in the first iteration regardless of the condition.
+
+33. When is a switch statement useful?
+When we want to branch to different blocks of code according to some values of a variable.
+
+34. What's the meaning of the two sections specified between parentheses in a range-based for loop, separated by a colon?
+The first is a variable declaration which will hold an element in a sequence. The second is the sequence to traverse.
+
+35. What's the meaning of the three sections specified between parentheses in a for loop, separated by semicolons?
+The first is the initialization block, the second is the condition to iterate, and the third is the increment block.
+
+36. Which of the following is NOT a difference between passing arguments by pointer or by reference.
+Pointer arguments use the same syntax as reference arguments.
+
+37. What's a difference between the implementation of a global function and a member function?
+Member function implementations need to specify the class with the scope resolution operator (double colon).
+
+38. Why is a function prototype necessary?
+Because it informs the compiler about the return data type, and the parameter types prior to using the functions.
+
+39. Which class can be used to read from a text file?
+ifstream
+
+40. Which of the following is NOT an advantage of using the insertion operator for writing into a file?
+It's safe to use when the file is not open, or it doesn't exist.
+
