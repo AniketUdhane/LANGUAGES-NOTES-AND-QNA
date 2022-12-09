@@ -1,0 +1,11 @@
+1. Why are data structures important for the implementation of algorithms?
+They influence the speed at which data can be stored and retrieved.
+
+2. What is required to prove the incorrectness of an algorithm?
+one wrong case
+
+3. Why is the following instruction NOT an algorithm?
+If you see a bear, run.
+Neither the problem nor the solution steps are precisely defined.
+
+4. 
