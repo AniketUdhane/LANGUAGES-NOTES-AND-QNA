@@ -1,0 +1,135 @@
+c++ data types
+1. integers
+signed or unsigned
+int
+char(8 bits)
+
+2. floating point numbers
+floating point numbers represent real numbers
+e.g. 3.14, 1.3333, 0.5, -14.22
+ieee 754 binary floating point
+float, double, long double
+
+3. boolean
+bool
+{true, false}
+anything other than is true
+
+4. string class
+string are not natively supported by the language
+however they are supported in the standerd library as a class
+<string> provides the string class with lots of functions
+
+5. pointers
+special data type for a memory address
+pointers act as references to variables
+the same pointer may be used to access many different variables sequentially
+
+-------------------------------------------
+
+variables
+temporary data storage units
+they must be declared prior to being used
+the declaration must specify a type and a name
+the declaration may contain initialisation
+
+constant literals
+int: 123, -5, 023, 0x3A(hexadecimal), 0b1100(binary), 23U
+float: 23.0f, 0.0f
+double: 25.4,-22.5
+char: 'a','X','\0','\n'
+string: "hi there"
+
+global variables are accesible to whole code
+
+variable name can not be same as keywords
+
+Expressions
+a symbolic representation of a calculation(like algebra)
+may contain variables, constants and operators
+must produce a value
+
+assignments
+a line of code that assigns a value to a variable
+must contain a lef-hand and a right hand side expression
+the lefthand side expression must be able to hold a value
+the expression data types must match
+
+popular operations:
+arithmatic: + - * / %
+bitwise: & | ~ ^
+logical: && || !
+relational: == != > < >= <= 
+pointer: * & ->
+
+
+contants
+identifiers with values that will not change during execution
+useful as parameters in your code
+may be implemented with directives or as variables
+
+contants as directives
+the #define directives schedules a find-and-replace operation
+#define ROOMS 4   // macro declaration
+the use of #define is sometimes discouraged
+
+arrays 
+collection of data
+homogenous
+fixed size
+contiguous in memory
+
+structures
+containers of heterogenous data members
+useful for implementing simple models
+structures are also c constructs
+
+#include <iostream>
+using namespace std;
+enum cow_purpose {dairy, meat, hide, pet};
+
+struct cow{
+string name;
+int age;
+unsigned char purpose;
+};
+int main(){
+cow my_cow;
+my_cow.age=25;
+my_cow.name="belly";
+my_cow.purpose=dairy;
+cout<<my_cow.age<<" "<<my_cow.name<<" "<<(int)my_cow.purpose<<endl;
+return 0;
+}
+
+classes
+basic elements of oop
+useful for implementing models
+contains data and function members
+the same as java or python classes
+
+references
+aliases to existing variables: int& my_ref = my_int;
+uses the same syntax as the referenced variables
+references are not pointers
+references are not object
+must be initialised at declaration
+can not reference a second object
+have a fixed type and object
+one level of direction
+no need for dereferencing
+
+pointers
+initialization is optional
+can point to different objects
+can be void and NULL
+multiple levels of indirection
+must be dereferenced
+
+vectors
+dynamic size containers
+the memory is managed for you
+generic container class
+part of stl
+#include <vector>
+vector<int> p;
