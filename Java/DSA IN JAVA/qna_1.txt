@@ -8,4 +8,25 @@ one wrong case
 If you see a bear, run.
 Neither the problem nor the solution steps are precisely defined.
 
-4. 
+4. Which assumption is not required for the RAM model of computation?
+presorted data
+
+5. Why is space complexity secondary to time complexity?
+RAM is inexpensive.
+
+6. An algorithm exhibits cubic growth of computation time with the size of the input data. If 5 ms are required for 10,000 data elements, about how much time is required for 300,000 data elements?
+135 s
+
+7. For the following pseudocode, which type of relationship exists between the required computation time and N?
+
+for I = 0 to N
+     for j = 0 to N-1
+          for k = 0 to N-2
+               Acc = Acc + A(i)*A(j)*A(k)
+               
+ cubic
+ 
+ 8. Which category is most time-prohibitive?
+n!
+
+9. 
