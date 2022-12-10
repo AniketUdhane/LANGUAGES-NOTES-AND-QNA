@@ -29,4 +29,47 @@ for I = 0 to N
  8. Which category is most time-prohibitive?
 n!
 
-9. 
+9. What is the time complexity for a search in an unordered array?
+O(n)
+
+10. What is the time complexity for a binary search in an ordered array?
+O(log2(n))
+
+11. Which sorting algorithm typically has the best performance for small, partially presorted lists?
+insertion
+
+12. You start with an array A = 0 7 4' 4 2 5 4'' 1. Which option represents a stable sort?
+0 1 2 4' 4 4'' 5 7 
+
+13. Why is an insertion sort a familiar operation?
+People who file records or play cards do this operation routinely.
+
+14. What is wrong with the following pseudocode for an insertion sort for an array D of length D.len?
+
+for I = 1 to D.len-1
+     tmp = D[i]
+     j = i-1
+     while j >= 0 && D[j]> tmp
+          D[j+1] = D[j]
+          j = j+1
+     A[j+1]= tmp
+     
+The index j within the while loop should be decremented rather than incremented.
+
+15. Why do inserting and deleting items in an ordered array have a time complexity of O(n)?
+The shifting operations prior to insertion or after deletion require O(n) time.
+
+16. What is wrong with the following pseudocode for a selection sort for an array D of length D.len?
+
+for I = 0 to D.len-2
+     minIndex = I
+     for j = i+1 to D.len-2
+          if (D[j] < D[minIndex])
+               minIndex=j
+     tmp = D[minIndex]
+     D[minIndex] = D[i]
+     D[i] = tmp
+     
+The upper limit on the second for loop should be D.len-1.
+
+16. 
