@@ -72,4 +72,77 @@ for I = 0 to D.len-2
      
 The upper limit on the second for loop should be D.len-1.
 
-16. 
+16. What is the time complexity of inserting a new element at the head of a linked list?
+O(1)
+
+17. What is wrong with the following code for computing the length of a list?
+
+public int length() {
+     int length = 0;
+     Node current = this.head;
+     length++;
+     while(current != null) {
+          current = current.getNextNode();
+     }
+}
+The length++ operation should be inside the while loop.
+
+18. How does the required search time vary with the length of a linked list?
+O(n)
+
+19. What is the purpose of the following code in insertAtTail?
+
+if (this.head == null) {
+     this.head == newNode;
+}
+It inserts a head if the linked list is empty.
+
+19. How do you delete the first node from a linked list using the tools from this course?
+public void deleteFromHead() { this.head = this.head.getNextNode(); }
+
+20. Why is the performance of an insertion sort on a doubly linked list typically better than on an indexed array?
+Upon a shift, you only need to rearrange nearest neighbors rather than all elements.
+
+21. What are the variable types in a Node for the example Java code provided?
+integer and Node
+
+22. What is wrong with the following class declaration for a linked list?
+
+public class LinkedList {
+     private Node head;
+     private Node nextNode;
+}
+A linked list should contain only a reference to the head.
+
+23. Why is the time complexity for insertion in a sorted linked list O(n) the worst case?
+You must compare the insertion element to all elements in the list.
+
+24. Why is the following code contained in insertAtHead(int data) for a DoublyLinkedList?
+
+if (this.head != null) {
+     this.head.setPreviousNode(newNode);
+}
+to handle the case of insertion into an empty list
+
+25. What composes a node in a linked list?
+a data element and reference to the next node
+
+26. What does the PUSH operation do to a stack?
+It adds a new element to the top.
+
+27. A circular queue has a maximum length of 12. If Head Index = 5 and Tail Index = 2, how many elements are empty?
+2
+
+28. From an empty, double-ended, circular queue of length 9, enqueue 4 elements at the head and 3 at the tail. Dequeue 2 elements from the head and 1 from the tail. What are the head and tail indices?
+2 and 5
+
+29. For the implementation shown, what is the value of the top index for an empty stack?
+-1
+
+30. What does the ENQUEUEING operation do?
+It adds an element to the end of the queue.
+
+31. From an empty, double-ended, circular queue of length 12, you enqueue 7 elements at the head and 3 at the tail. What are the subsequent head and tail indices?
+6 and 2
+
+32. 
