@@ -145,4 +145,30 @@ It adds an element to the end of the queue.
 31. From an empty, double-ended, circular queue of length 12, you enqueue 7 elements at the head and 3 at the tail. What are the subsequent head and tail indices?
 6 and 2
 
-32. 
+32. In the Tower of Hanoi implementation, which snippet specifies the breaking condition?
+if (numberOfDiscs ==1) {
+
+33. How does the time required for a merge sort vary with the size of the starting array?
+O(nlog2(n))
+
+34. When do you stop partitioning the arrays to be sorted in a merge sort?
+when they are of length 1
+
+35. In the pseudocode implementation of the merge sort, which condition corresponds to breaking the recursion?
+start == middle
+
+36. Why does stack overflow occur, even if there is a valid breaking condition?
+A large number of recursions may be required to meet the breaking condition.
+
+37. What is the function of the result parameter in the tail-recursion code?
+
+public int factorial (int n, int result) {
+     if (n == 0) return result;
+     return factorial (n-1, n*result);
+}
+
+It is an accumulator that obviates the need for a stack.
+
+38. In gneral, how do iterative methods compare with recursive methods?
+Recursive methods are more concise to code, but run slower and require more memory.
+
