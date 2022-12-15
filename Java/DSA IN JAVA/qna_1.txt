@@ -294,5 +294,33 @@ The variable pivot is not initiated, the upper limit for the index j is incorrec
 A diagram labeled, Counting Sort. A row labeled, Data Array of size n, where values for n are, 3, 10, 2, 4, 2, 6, 9, 5, 7, and 2. A second row is labeled, Temp has 11 boxes, all numbered 0. Under the first box is 0. Under the last box is K.
 
 k<n
+***********heap************
+60. If you call the root node 0, what is the index for 2 in the array representation of the following heap?
 
-60. 
+A heap has a root of 28. 28 has 2 children, left 18 and right 13. 18 has children, left 2 and right 15. 
+
+3
+
+61. How can a Heap sort be represented algorithmically?
+1. Move the root to the last unfilled array location
+
+2. Move the last heap item to the root
+
+3. Fix the remaining heap
+
+4. Repeat
+
+62. What is the time complexity for deleting the root from a heap?
+O(log2(n))
+
+63. If you add the element 17 to the following heap and then fix the heap, where will the element 17 be located?
+
+A heap has a root of 28. 28 has 2 children, left 18 and right 13. 18 has children, left 2 and right 15. 8
+
+as the right child of 28
+
+64. What is the array representation of the heap built from the starting sequence 32 12 15 6 8 21 28?
+32 12 28 6 8 15 21
+
+65. 
+
