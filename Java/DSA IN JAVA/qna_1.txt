@@ -322,5 +322,28 @@ as the right child of 28
 64. What is the array representation of the heap built from the starting sequence 32 12 15 6 8 21 28?
 32 12 28 6 8 15 21
 
-65. 
+65. How do you resolve collisions by chaining?
+by increasing the range of the array index
+by making each array element a heap
+by making each array element a linked list
+
+66. Why are arrays attractive for large data sets?
+Data insertion and retrieval are O(1) operations.
+
+67. What is a Hash table collision?
+an instance in which two keys map to the same index
+
+68. Hash clustering is a problem in your application. Which open addressing strategy should prove most useful?
+Image: Strategies for open addressing A.png [custom] AltText: ""The modulo m of the sum of one hash function plus i times another hash function
+
+69. How should the array size, m, be related to the number of keys, n, in order to use open addressing?
+m>=n
+
+70. If you have a load factor of 0.75, how many probes of the Hash table are required, on average, for accurate addressing?
+4
+
+71. You are using the method of division to map keys with a range of 248 to 364 onto an array of length 37. Which keys map to an index of 24?
+283, 320, and 357
+
+72. 
 
