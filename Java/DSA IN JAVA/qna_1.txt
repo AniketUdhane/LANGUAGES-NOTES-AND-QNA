@@ -172,3 +172,87 @@ It is an accumulator that obviates the need for a stack.
 38. In gneral, how do iterative methods compare with recursive methods?
 Recursive methods are more concise to code, but run slower and require more memory.
 
+39. Where would you insert the value 31 in the following binary search tree?
+
+A binary search tree begins with 52. 52 has children left 33 and right 65. 33 has children left 25 and right 39. 25 has children left 12 and right 27. 39 has children left 34 and right 48. 65 has children left 60 and right 78. 78 has children left 72 and right 90. 72 has left child 70.
+
+as the right child of 27
+
+40. In the following snippet of insert(), what happens if data > this.data and this.rightChild != null?
+
+if (data >= this.data) {
+     if (this.rightChild == null)
+          this.rightChild = new TreeNode(data);
+     else
+          this.rightChild.insert(data);
+     }
+
+The code calls insert() recursively.
+
+41. In the following tree, which node besides 34 is a valid successor for 33?
+
+A tree is labeled, Case 3, Node to be deleted has 2 children. 52 has children left 33 and right 65. 33 has children left 25 and right 39. 25 has children left 12 and right 27. 39 has children left 34 and right 48. 65 has children left 60 and right 78. 78 has children left 72 and right 90. 72 has left child 70.
+
+27
+
+42. How does find() need to be changed in order to use the concept of a soft delete employing a Boolean variable isDeleted for each node?
+by replacing if(this.data === data) with if(this.data == data && !isDeleted)
+
+43. Which part of the following code tests that the node being examined is a leaf?
+
+if (current.getLeftChild() == null &&        current.getRightChild() == null ) {
+     if (current == root) {
+          root = null;   } else {
+          if (isLeftChild)
+               parent.setLeftChild(null);
+          else
+               parent.setRightChild(null);  } }
+               
+if (current.getLeftChild() == null &&        current.getRightChild() == null )
+
+44. Which action should you take if the node to be deleted has one child?
+Make that child an offspring of the parent of the node to be deleted.
+
+45. Why are unbalanced trees undesirable?
+Several algorithms require more processing time on unbalanced trees than on balanced trees.
+
+46. A balanced binary tree has about 1,000 nodes. What is the approximate height of the tree in number of layers?
+10
+
+47. For the following binary search tree, what is the preorder sequence?
+
+A binary search tree begins with 48. 48 has children left 45 and right 73. 45 has left child 37. 37 has children left 21 and right 39. 73 has children left 50 and right 87. 50 has right child 68. 68 has left child 64. 64 has children left 62 and right 66.
+
+48 45 37 21 39 73 50 68 64 62 66 87
+
+48. For the following binary search tree, what is the postorder sequence?
+
+A binary search tree begins with 48. 48 has children left 45 and right 73. 45 has left child 37. 37 has children left 21 and right 39. 73 has children left 50 and right 87. 50 has right child 68. 68 has left child 64. 64 has children left 62 and right 66.
+
+21 39 37 45 62 66 64 68 50 87 73 48
+
+49. What is the time complexity for searching, insertion, and deletion with a binary search tree?
+O(log(n))
+
+50. Why does the following diagram not represent a valid tree data structure?
+
+A tree diagram begins with A. From A are options B, C, and D. From option B is E. From C is F and G, which are also linked together. An arrow points from A to Root.
+
+The link between F and G provides multiple pathways from the root to the nodes.
+
+51. Which statement is true for a binary search tree?
+The value in the left child is always less than the parent, and the value in the right child is always greater than the parent.
+
+52. In the following implementation of find() for a binary search tree, why is there no statement containing a conditional operating on data > this.data?
+
+Public TreeNode find(integer data) {
+     if (this.data == data)
+          return this;
+     If (data < this.data && leftChild != null)
+          return leftChild.find(data);
+     if (rightChild != null)
+          return rightChild.find(data);
+     return null; }
+     
+You do not need to directly test this possibility, since it can be deduced from the first two if statements.
+
