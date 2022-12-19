@@ -49,7 +49,45 @@ The number of children is represented by a whole number, which is represented by
 e
 The charAt String instance method returns a character. Since Strings start their indexing at 0, the character at index 3 is e.
 
-13. 
+13. Which example shows the correct syntax for a while loop?
+while (isOnRepeat) {
+    String userInput = input.next();
+    if (userInput.equals("yes")) {
+        isOnRepeat = false; }
+}
+This is the correct example. It is important to have a trigger to exit out of a loop.
 
+14. In the following code, which line numbers are in scope for the favoriteNumber variable?
+if (inputtedNum < 100) {
+int favoriteNumber = 5;
+1) favoriteNumber = 10;
+2) System.out.println(favoriteNumber);
+} else {
+3) System.out.println(favoriteNumber); }
+4) inputtedNum++;
 
+1, 2
+Since the variable is declared inside the `if` statement, it is only available in lines 1 and 2 before the closing curly bracket is seen.
 
+15. If the value of inputtedNum is 6, then what is the output of the following code?
+
+if (inputtedNum < 5) {
+    System.out.println("The sun will shine bright"); 
+} else {
+    System.out.println("The moon will glow bright");
+}
+The moon will glow bright
+The value `6` would make the `if` condition false, so the code under the `else` statement would be executed.
+
+16. Which control flow statement is represented by a diamond shape in a flowchart diagram?
+if
+
+17. How would you best describe what control flow statements do in a program?
+They can cause a block of code to be executed once, multiple times, or not at all.
+Control flow statements allow code to be executed in different ways besides the default sequential order.
+
+18. How would you describe a while loop?
+Check whether the condition is true; if it is true, then keep repeating until the condition is false.
+A `while` loop keeps repeating a block of code as long as the condition evaluates to a true value.
+
+19. 
