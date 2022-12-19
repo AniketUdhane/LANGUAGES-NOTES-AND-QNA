@@ -1,0 +1,55 @@
+1. How would you output the value stored in a variable named studentAge and make the next output begin on a new line?
+System.out.println(studentAge);
+The `println` method is a command that outputs values with a new line character added to the end.
+
+2. What does the data type int stand for?
+integer
+
+3. How would you write code to get input from the user and store an integer value into your program?
+Scanner input = new Scanner(System.in);
+studentNumber = input.nextInt();
+To get an integer number from the user, use the `nextInt` method of the `System.in` class.
+
+4. What code would you put in line 4 to output "Kayla has a GPA of 3.75" to the console?
+
+1) public static void main(String[] args) {
+2)    double studentGPA = 3.75;
+3)    String studentFirstName = "Kayla";
+4)    _____ }
+System.out.println(studentFirstName + " has a GPA of " + studentGPA);
+To concatenate strings in Java, the `+` operator is used.
+
+5. What is the syntactically correct way to declare a variable in Java?
+int numberOfPeople;
+In Java, when we create variables, we have the data type followed by the variable name. Here int stands for integer meaning whole number and numberOfPeople is the name of the variable.
+
+6. If a variable called studentFirstName contained the value Brian, then how would you reference the character n?
+studentFirstName.charAt(4);
+In Java, an array starts with an index of zero. So, the `n` would be at index position four.
+
+7. _____ in real life can be represented in code.
+Anything
+
+8. We describe the types of data an object has in a Class with _____.
+properties or attributes
+
+9. A string is what kind of data type?
+reference
+A string is a reference data type; it is actually a collection of char data types in sequential order.
+
+10. How would you declare a variable named studentGPA and assign it an initial value of 3.45?
+double studentGPA = 3.45;
+A valid declaration specifies data type, name, and optionally an initial value. A double data type is best since a GPA has a fractional part.
+
+11. Which data type would you use to represent the number of children there are in someone's family?
+integer
+The number of children is represented by a whole number, which is represented by an integer data type in Java.
+
+12. What would the following code return?
+e
+The charAt String instance method returns a character. Since Strings start their indexing at 0, the character at index 3 is e.
+
+13. 
+
+
+
