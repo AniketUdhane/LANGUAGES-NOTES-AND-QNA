@@ -187,3 +187,73 @@ ifstream
 40. Which of the following is NOT an advantage of using the insertion operator for writing into a file?
 It's safe to use when the file is not open, or it doesn't exist.
 
+41. A function has been defined with the following code. What is the correct way to call this function inside main?
+
+public static void myNewFunction() 
+{ 
+    System.out.println("This is my new function");
+}
+
+myNewFunction();
+To call a function, you type the function name and then the argument list inside parentheses.
+
+42. What is the correct code block to define a function called announceDeveloperTeaTime that will be used inside the main function?
+public static void announceDeveloperTeaTime() { }
+public static void main(String[] args) { }
+A function must be defined before it can be used. Defining it before the `main` function is the best way to do this.
+
+43. Which code calls a function named calculateTotalMealPrice that takes three parameters named listedMealPrice, tipRate, and taxRate that returns the total cost, and then prints out the value?
+
+public static void main(String[] args) {
+     double totalcost = calculateTotalMealPrice(15.55, 0.2, 0.08);
+     System.out.println("The total cost of the meal is " + totalcost);
+}
+This code is correct. In this example, a new variable is declared to receive the return value from the function call.
+
+44. The function below computes the total cost of a meal given the price of the meal, tip, and tax. How should you change this function to send the total cost as a return value instead of printing it?
+
+public static void calculateTotalMealPrice(double listedMealPrice, double tipRate, double taxRate) {
+     double tip = tipRate * listedMealPrice;
+     double tax = taxRate * listedMealPrice;
+     double result = listedMealPrice + tip + tax;
+     System.out.println("Your total meal price is " + result); 
+}
+
+public static double calculateTotalMealPrice(double listedMealPrice, double tipRate, double taxRate) {
+     double tip = tipRate * listedMealPrice;
+     double tax = taxRate * listedMealPrice;
+     double result = listedMealPrice + tip + tax;
+     return result;
+}
+
+The new function definition will have a `double` return type instead of `void`. The `return` keyword is also used in the function body.
+
+45. How would you create an example call to a function named calculateTotalMealPrice that takes three parameters named listedMealPrice, tipRate, and taxRate, and has no return value?
+calculateTotalMealPrice(15.55, 0.2, 0.08);
+
+46. The following function computes the total cost of a meal given the price of the meal, tip, and tax. How should you change line 1 to make the function work correctly?
+
+1) public static void calculateTotalMealPrice() {
+2)     double tip = tipRate * listedMealPrice;
+3)     double tax = taxRate * listedMealPrice;
+4)     double result = listedMealPrice + tip + tax;
+5)     System.out.println("Your total meal price is " + result); }
+
+public static void calculateTotalMealPrice(double listedMealPrice, double tipRate, double taxRate) {
+The function now requires three `double` parameters, which are specified correctly in this example.
+
+47. What is the main benefit of writing a function?
+It allows a particular task to be defined once with the ability to reuse it in other parts of the program.
+A function encapsulates a single task. It can be called over and over again by using the function's name.
+
+48. How would you create a program that will calculate 2 to the 5th power using a Java built-in function, and then print the result?
+public static void main(String[] args) {
+     double result = Math.pow(2, 5);
+     System.out.println(result);
+}
+The `Math.pow` function takes two arguments and returns a `double` data type.
+
+49. You need to write a Java program that calculates the square root of a number. What should you check before you start to write the program?
+Check the Java documentation to see whether there is a built-in function that will calculate the square root of a number.
+It is always good to check whether a Java built-in function is available before proceeding to write your own code.
+
