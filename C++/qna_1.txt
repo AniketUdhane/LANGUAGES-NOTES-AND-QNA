@@ -257,3 +257,6 @@ The `Math.pow` function takes two arguments and returns a `double` data type.
 Check the Java documentation to see whether there is a built-in function that will calculate the square root of a number.
 It is always good to check whether a Java built-in function is available before proceeding to write your own code.
 
+50. If you have a Triangle class that has an instance method called findArea, takes no parameters, and returns a double data type, then which line of code correctly finds the area?
+double triangleArea = mytriangle.findArea();
+A variable with a data type of `double` needs to be declared to hold the return value from the instance method.
