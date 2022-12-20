@@ -1,0 +1,59 @@
+1. What is true about a constructor function?
+It always returns an instance of the class that it is in.
+A constructor is used to create instances of the class that it is located in.
+
+2. Which description is correct about the following line of code?
+
+System.out.println("This is a test");
+println is a class method.
+
+3. What is the main difference between an instance method and a class method?
+A class method is static and does not require an instance to be created first to use it.
+You can use a static method immediately without the need to create an object instance first.
+
+4. When is an attribute accessible in a class?
+
+It is always accessible inside a class.
+An attribute variable is accessible to every function and constructor inside the class.
+
+5. Which of these statements correctly creates a new Triangle object in a new Triangle variable using the constructor shown below?
+
+public Triangle(double base, double height) {
+    this.base = base;
+    this.height = height;
+}
+
+Triangle triangleA = new Triangle(3.5, 2.5);
+An object declaration specifies the class name, the variable name, the `new` keyword, and the argument list for the constructor.
+
+6. How can creating classes inside a program help a developer?
+
+It helps keep the code organized, which makes it easier for others to read and understand it.
+Classes help with organizing code into small tasks that are easier to understand.
+
+7. How would you write a constructor for a Rectangle class that takes two double data types as parameters and initializes the attributes?
+
+public Rectangle(double length, double width) {
+    this.length = length;
+    this.width = width;
+}
+A constructor has the same name as the class and has no return type; it will have `public` access.
+
+8. If numOfSides is a static class integer variable of the Triangle class, then how would you correctly access this variable inside the main function?
+System.out.println(Triangle.numOfSides);
+For static variables, you can type the class name followed by a period (dot) to access it.
+
+9. When would you use the this keyword?
+when you need to make a distinction between an attribute variable and a parameter
+The `this` keyword allows you to access the attributes inside the class.
+
+10. You have a class that has a function to calculate the area of a rectangle. Which other component is needed to complete the class?
+Add two properties to represent the two side lengths of the rectangle.
+A rectangle can be described using the length of two sides, so these would be the properties of a rectangle class.
+
+11. What would be considered a behavior found in a user-defined class?
+2) calculatePerimeter
+
+12. How is an IDE helpful when working with instances of classes?
+An IDE allows you to step through the code and see the values that are assigned to each attribute.
+An IDE includes a step feature that allows you to examine each line of code, and also the values stored inside variables.
