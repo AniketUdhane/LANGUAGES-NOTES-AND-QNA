@@ -19,4 +19,19 @@ Develop in a code editor, test in as many browsers as you can get your hands on.
 7. Why have command line and automation tools become popular in JavaScript development?
 They simplify complex processes and introduce features to help developers write better code.
 
-8. 
+8. When does the browser execute JavaScript?
+By default: When the script is encountered. If the script is set to "async", when the script is fully loaded. If the script is set to "defer", when the entire HTML page is rendered.
+
+9. What is the correct markup for adding an external JavaScript file to an HTML document?
+<script src="javascript.js" async></script>
+Correct
+
+While `<script src="javascript.js"></script>` is technically correct, it is recommended to always async or defer your script unless you have a specific reason for the script to cause render blocking.
+
+10. What happens when you defer JavaScript?
+The browser loads the JavaScript asynchronously when it is encountered, then waits until all HTML is rendered before executing the script.
+
+11. JavaScript modules are heavily used in frameworks like React and Vue. What is the advantage of using modules?
+Modules enable modularization of code where individual functions, components, data objects, and other parts can be separated into individual files.
+
+12. 
